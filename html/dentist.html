@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> التسجيل لطب الاسنان - جامعة فاينال الدولية</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="/icon/final-international-icon.png" sizes="152x152">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+</head>
+<body>
+    <div class="form-container">
+        <form id="register-form">
+            <h1>التسجيل الإلكتروني لطب الاسنان</h1>
+            <div class="labelInputs">
+                <label>الأسم الكامل كما في جواز السفر( باللغة الانجليزية )*</label>
+                <input type="text" placeholder="الأسم الكامل كما في جواز السفر( باللغة الانجليزية)" name="الاسم الكامل" id="name">
+                <small>الحقل خاطئ</small>
+            </div>
+            <div class="labelInputs">
+                <label>E-mail (تاكد من وضع ايميلك الصحيح)*:</label>
+                <input type="email" placeholder="E-mail. ( تاكد من وضع ايميلك الصحيح )" name="الايميل الإلكتروني" id="email">
+                <small>الحقل خاطئ</small>
+            </div>
+            <div class="labelInputs">
+                <label>رقم الجوال مع مفتاح البلد الكامل ( يفضل ان يحتوي على واتس اب )*:</label>
+                <input type="tel" placeholder="رقم الجوال مع مفتاح البلد الكامل ( يفضل ان يحتوي على واتس اب )" name="رقم الهاتف" id="phone">
+                <small>الحقل خاطئ</small>
+            </div>
+            <div class="labelInputs">
+                <label>تاريخ الميلاد*:</label>
+                <input type="date" value="2021-02-22" name="تاريخ الميلاد" id="birthday">
+                <small>الحقل خاطئ</small>
+            </div>
+            <div class="labelInputs">
+                <label>بلد ومدينة الأقامة الحالية:</label>
+                <input type="text" placeholder="بلد ومدينة الأقامة الحالية" name="العنوان">
+            </div>
+            <div class="labelInputs">
+                <label>المعدل العام في الثانوية العامة ( البكالوريا - التوجيهي ) / معدل النقاط لطلاب المغرب*:</label>
+                <input type="number" placeholder="المعدل العام في الثانوية العامة ( البكالوريا - التوجيهي ) / معدل النقاط لطلاب المغرب" name="معدل الثانوية العام" id="average"><br>
+                <small>الحقل خاطئ</small>
+            </div>
+            <div class="labelInputs">
+                <label>شهادة الثانوية العامة ( البكلوريا - التوجيهي )*</label>
+                <input type="file" name="شهادة الثانوية العامة">
+            </div>
+            <div class="labelInputs">
+                <label>كشف درجات الثانوية ( البكلوريا - التوجيهي  )*</label>
+                <input type="file" name="كشف درجات الثانوية">
+            </div>
+            <div class="labelInputs">
+                <label>جواز السفر أو شهادة الميلاد اذا لم تحصل على جواز السفر بعد*</label>
+                <input type="file" name="جواز السفر">
+            </div>
+            <div class="labelInputs">
+                <label>رسالة التوصية*</label>
+                <input type="file" name="رسالة التوصية">
+            </div>
+            <div class="labelInputs">
+                <label>رسالة الدافع*</label>
+                <input type="file" name="رسالة الدافع">
+            </div>
+            <div class="labelInputs">
+                <label>مرفق إضافي (إذا وجد )</label>
+                <input type="file" name="مرفق إضافي">
+            </div>
+            <div class="labelInputs">
+                <label>عرف عن نفسك أو أضف ملاحظة إذا وجد</label>
+                <textarea name="تعليق" placeholder="عرف عن نفسك أو أضف ملاحظة إذا وجد."></textarea>
+            </div>
+            <input type="submit" value="ارسل" name="submit-btn" id="form-submit">
+        </form>
+    </div>
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>

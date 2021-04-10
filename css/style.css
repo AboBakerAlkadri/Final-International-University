@@ -1,0 +1,1452 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Amiri:ital@1&display=swap");*/
+@import url("https://fonts.googleapis.com/css2?family=Tajawal&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  animation: transitionIn 0.7s;
+  font-family: "Tajawal", sans-serif;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    filter: alpha(0);
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    filter: alpha(10%);
+    transform: translateY(0);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/*Top most contianer with logo*/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.header img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+.search_container {
+  margin: auto;
+  max-width: 300px;
+}
+*/
+.search_container input::placeholder {
+  font-family: "Tajawal", sans-serif;
+}
+
+.search_container input[type="search"] {
+  padding: 7.6px;
+  font-size: 1.0625rem;
+  border: 1px solid rgb(56, 56, 56);
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  outline: none;
+}
+
+.search_container button {
+  float: left;
+  width: 20%;
+  padding: 8px;
+  background: #2196f3;
+  color: white;
+  font-size: 1.0625rem;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.search_container button:hover,
+.search_container button:focus {
+  background: #0b7dda;
+}
+
+.search_container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn_container {
+  margin-left: 70px;
+  display: none;
+}
+
+.btn_container a button {
+  font-size: 1rem;
+}
+
+.cta_1 button {
+  border: none;
+  outline: none;
+  background-color: rgba(92, 184, 92, 0.8);
+  color: #fff;
+  padding: 7px 7px;
+  margin: 0 10px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  cursor: pointer;
+}
+
+.cta_1 button:hover,
+.cta_1 button:focus {
+  background-color: rgba(92, 184, 92, 1);
+}
+
+.cta_2 button {
+  border: none;
+  outline: none;
+  background-color: rgb(239, 171, 74, 0.8);
+  color: #fff;
+  padding: 7px 7px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.cta_2 button:hover,
+.cta_2 button:focus {
+  background-color: rgba(239, 171, 74, 1);
+}
+
+.top_menu_container ul li {
+  padding: 0px 25px;
+  display: inline-block;
+}
+
+.top_menu_container ul li:nth-child(4) {
+  display: none;
+}
+
+.top_menu_container ul li a {
+  color: #000;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.top_menu_container ul li a:hover,
+.top_menu_container ul li a:focus {
+  color: #0bb4c7;
+}
+
+.cta_3 button {
+  border: none;
+  outline: none;
+  background-color: rgb(239, 171, 74, 0.7);
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 1s ease;
+  animation: background-change 2s infinite ease-in-out;
+}
+
+@keyframes background-change {
+  0% {
+    background-color: rgb(239, 171, 74, 0.7);
+  }
+  100% {
+    background-color: rgb(239, 171, 74, 1);
+  }
+}
+
+/*Automated slider images*/
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 35vh;
+  width: 100%;
+}
+
+.slide {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35vh;
+  opacity: 0;
+  filter: alpha(0);
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+  opacity: 1;
+  filter: alpha(10%);
+}
+
+.buttons button#next {
+  position: absolute;
+  top: 35%;
+  right: 95%;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top: 35%;
+  left: 95%;
+}
+
+.buttons button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  outline: none;
+}
+
+.buttons button:hover,
+.buttons button:focus {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Backgorund Images */
+
+.slide:first-child {
+  background: url("/images/slider-img1.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(2) {
+  background: url("/images/slider-img2.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(3) {
+  background: url("/images/slider-img3.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(4) {
+  background: url("/images/slider-img4.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(5) {
+  background: url("/images/slider-img5.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(6) {
+  background: url("/images/slider-img6.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(7) {
+  background: url("/images/slider-img7.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(8) {
+  background: url("/images/slider-img8.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(9) {
+  background: url("/images/slider-img9.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(10) {
+  background: url("/images/slider-img10.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(11) {
+  background: url("/images/slider-img11.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(12) {
+  background: url("/images/slider-img12.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(13) {
+  background: url("/images/slider-img13.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(14) {
+  background: url("/images/slider-img14.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(15) {
+  background: url("/images/slider-img15.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(16) {
+  background: url("/images/slider-img16.jpg") no-repeat center center/cover;
+}
+.slide:nth-child(17) {
+  background: url("/images/slider-img17.jpg") no-repeat center center/cover;
+}
+
+/*Navigation menu*/
+
+.navigation_menu {
+  overflow: hidden;
+  background-color: rgb(212, 33, 46);
+  max-width: 100%;
+  height: auto;
+}
+
+.navigation_menu a {
+  float: left;
+  display: block;
+  font-size: 0.875rem;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  padding-left: 70px;
+  opacity: 0.9;
+  filter: alpha(90%);
+}
+
+.navigation_menu .icon {
+  display: none;
+}
+
+.navigation_menu a:hover,
+.navigation_menu a:focus {
+  opacity: 1;
+  filter: alpha(10%);
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+  padding-left: 65px;
+}
+
+.dropdown .dropbtn {
+  font-size: 0.875rem;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0px;
+  opacity: 0.9;
+  filter: alpha(90%);
+  cursor: pointer;
+}
+
+.navigation_menu a:hover,
+.dropdown:hover .dropbtn,
+.navigation_menu a:focus,
+.dropdown:focus .dropbtn {
+  opacity: 1;
+  filter: alpha(10%);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(42, 48, 59);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+  background-color: rgb(212, 33, 46);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus .dropdown-content {
+  display: block;
+}
+
+/*Banner sections*/
+article.banner_section_container {
+  display: grid;
+  /* grid-template-columns: 33% 33% 33%;*/
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  padding: 10px 15px;
+  background-color: #f7f7f7;
+}
+
+article.banner_section_container .banner_text_rightBorder {
+  font-size: 1.5625rem;
+  border-right: 0.5vw solid rgb(212, 33, 46);
+  color: #a5b0b6;
+  padding-right: 10px;
+}
+
+article.banner_section_container .section_one a {
+  display: block;
+  padding: 20px 10px;
+  color: #807f7f;
+  font-weight: bold;
+}
+
+hr {
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+}
+
+article.banner_section_container .section_one a:hover,
+article.banner_section_container .section_two li:hover {
+  background-color: #e9e9e9;
+}
+
+article.banner_section_container .section_two li {
+  display: block;
+  padding: 20px 10px;
+}
+
+article.banner_section_container .section_two li a {
+  font-weight: bold;
+  color: #807f7f;
+}
+
+article.banner_section_container .section_three img {
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+}
+
+article.banner_section_container .section_three .more_border {
+  border: 1px solid#ccc;
+  background-color: #e9e9e9;
+  margin-top: 10px;
+  text-align: center;
+  color: #807f7f;
+}
+
+/*Live in north cyprus section*/
+
+.live-in-cyprus {
+  border-bottom: 1px solid #000;
+}
+
+.live-in-cyprus > h2 {
+  text-align: center;
+  color: #ff0000;
+}
+
+.live-in-cyprus ul,
+.live-in-cyprus p {
+  margin: 1% 3%;
+}
+
+.live-in-cyprus p {
+  font-size: 1.2rem;
+}
+
+.live-in-cyprus ul li {
+  list-style: square;
+  padding: 1%;
+  color: #0000ff;
+  font-size: 1rem;
+}
+
+/*Departments section*/
+
+.departments h2 {
+  color: #ff0000;
+  text-align: center;
+  margin: 1% 0;
+}
+
+.departments-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin-bottom: 1em;
+}
+
+/* Create four equal columns that sits next to each other */
+.departments-column {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 5px;
+}
+
+.departments-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.departments-column img:hover,
+.departments-column img:focus {
+  transform: scale(2);
+}
+
+@media (max-width: 800px) {
+  .departments-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .departments-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/*We are different section*/
+.we-are-different {
+  position: relative;
+  background-color: #d3d3d3;
+  width: 100%;
+  padding: 3% 3%;
+  border-bottom: 1px solid #000;
+}
+
+.we-are-different h2 {
+  margin-bottom: 2%;
+}
+
+.we-are-different p {
+  padding: 3% 0;
+  font-size: 1.1rem;
+}
+
+.we-are-different #about-fiu {
+  position: absolute;
+  right: 55%;
+  top: 2%;
+  width: 40%;
+  height: 40%;
+}
+
+/*Registeration section*/
+.registeration-section-container {
+  margin-top: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.registeration-section-container > h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff0000;
+}
+
+.registeration-btns {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.registeration-btns a button {
+  border-radius: 15px;
+  font-size: 1rem;
+  width: 180px;
+  height: 50px;
+  color: #fff;
+  background-color: #008080;
+  border: 2px solid #000;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.registeration-btns a button:hover {
+  opacity: 0.8;
+}
+
+.registeration-btns a button:focus {
+  opacity: 0.8;
+}
+
+/*Fees section*/
+
+.fees {
+  border-bottom: 1px solid #000;
+  padding: 1% 0;
+}
+
+.fees h2 {
+  text-align: center;
+  color: #ff0000;
+}
+
+.fees img {
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.fees img:hover {
+  transform: scale(1.3);
+}
+
+.fees img:focus {
+  transform: scale(1.3);
+}
+
+/*payment section*/
+
+.payment {
+  border-bottom: 1px solid #000;
+  padding: 1%;
+}
+.payment h2 {
+  text-align: center;
+  color: #ff0000;
+  margin: 2% 0;
+}
+
+.payment img {
+  margin: 1% auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 30%;
+}
+
+.payment a,
+.payment p {
+  display: block;
+  padding: 0 2%;
+  font-size: 1.2rem;
+}
+
+.payment .pay {
+  color: #639;
+}
+
+.payment .explain {
+  color: #ff8c00;
+}
+
+.payment a:hover {
+  text-decoration: underline;
+}
+
+/*Accomodation*/
+
+.accommodation {
+  border-bottom: 1px solid #000;
+}
+
+.accommodation > h2 {
+  text-align: center;
+  margin: 1% 0;
+  color: #ff0000;
+}
+
+.serinli-Accommodation p,
+.zetilik-Accommodation p,
+.Çatalköy-Accommodation p,
+.Liman-Accommodation p,
+.girls-Accommodation p {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.serinli-Accommodation p:first-child,
+.zetilik-Accommodation p:first-child,
+.Çatalköy-Accommodation p:first-child,
+.Liman-Accommodation p:first-child,
+.girls-Accommodation p:first-child {
+  font-size: 2rem;
+}
+
+.serinli-Accommodation img,
+.zetilik-Accommodation img,
+.Çatalköy-Accommodation img,
+.Liman-Accommodation img,
+.girls-Accommodation img {
+  width: 30%;
+  max-width: 100%;
+  height: auto;
+  margin: 1% auto;
+  display: block;
+}
+
+.serinli-Accommodation a button,
+.zetilik-Accommodation a button,
+.Çatalköy-Accommodation a button,
+.Liman-Accommodation a button,
+.girls-Accommodation a button {
+  margin: 1% auto;
+  display: block;
+  padding: 1% 1%;
+  -webkit-border-radius: 50px;
+  -moz-brder-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: rgba(232, 126, 4, 1);
+  transition: 0.9s all ease-out;
+  outline: none;
+}
+
+.serinli-Accommodation a button:hover,
+.zetilik-Accommodation a button:hover,
+.Çatalköy-Accommodation a button:hover,
+.Liman-Accommodation a button:hover,
+.girls-Accommodation a button:hover {
+  background-color: rgba(232, 126, 4, 0.8);
+}
+/*Social media section*/
+
+.social_media_container {
+  text-align: center;
+  width: 100%;
+  margin-top: 10%;
+}
+
+.social_media_container a {
+  color: #807f7f;
+}
+.social_media_container .button {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-brder-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+  text-align: center;
+}
+.social_media_container .button:hover {
+  width: 200px;
+}
+.social_media_container .button .icon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.social_media_container .button:nth-child(1):hover .icon {
+  background: #4267b2;
+}
+.social_media_container .button:nth-child(2):hover .icon {
+  background: #1da1f2;
+}
+.social_media_container .button:nth-child(3):hover .icon {
+  background: #e1306c;
+}
+.social_media_container .button:nth-child(4):hover .icon {
+  background: #ff0000;
+}
+.social_media_container .button .icon i {
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.social_media_container .button:hover .icon i {
+  color: #fff;
+}
+.social_media_container .button span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.social_media_container .button:nth-child(1) span {
+  color: #4267b2;
+}
+.social_media_container .button:nth-child(2) span {
+  color: #1da1f2;
+}
+.social_media_container .button:nth-child(3) span {
+  color: #e1306c;
+}
+
+.social_media_container .button:nth-child(4) span {
+  color: #ff0000;
+}
+
+/*Footer - fast access*/
+
+.fast_access {
+  display: flex;
+  background-color: #29323c;
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  /*border-right: 1px solid grey;*/
+}
+
+.contact_column .footer-logo {
+  padding: 5px 30px;
+}
+
+.contact_column .address {
+  margin: 0 40px;
+}
+
+.contact_column .address p {
+  font-size: 14px;
+  color: #fff;
+}
+
+.contact_column .telephone {
+  margin: 15px 40px;
+}
+
+.contact_column .telephone p {
+  padding-bottom: 10px;
+}
+
+.contact_column .telephone a,
+.contact_column .telephone p {
+  color: #fff;
+}
+
+.contact_column .telephone a:hover {
+  text-decoration: underline;
+}
+
+.contact_column .email {
+  margin: 15px 40px;
+}
+
+.contact_column .email p,
+.contact_column .email a {
+  color: #fff;
+  font-size: 15px;
+}
+
+.contact_column .email a {
+  text-decoration: underline;
+}
+
+.services-column,
+.fast-access-column,
+.colleges-column,
+.contact-column {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.services-column :first-child,
+.fast-access-column :first-child,
+.colleges-column :first-child,
+.contact-column :first-child {
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.services-column a,
+.fast-access-column a,
+.colleges-column a,
+.contact-column a {
+  color: #fff;
+  display: block;
+  padding: 10px 0;
+}
+
+/*Footer - all rights are reserved*/
+
+.copy-rights {
+  background-color: #1f1f1f;
+  width: 100%;
+}
+
+.copy-rights p {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+/*Bachelor page*/
+
+.form-container {
+  width: 85%;
+  max-width: 600px;
+  background: #f1f1f1;
+  /*position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+  height: auto;
+  margin: 30px auto;
+  padding: 30px 50px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: center;
+
+  box-shadow: 0 0 20px #000000b3;
+}
+
+.form-container h1 {
+  margin-top: 0;
+  font-weight: 200;
+  font-size: 2.5vw;
+}
+
+.labelInputs {
+  border: 1px solid gray;
+  margin: 8px 0;
+  padding: 25px 18px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.labelInputs label {
+  display: block;
+  text-align: right;
+  color: #333;
+  font-size: 1.45vw;
+}
+
+.labelInputs select {
+  font-size: 1.45vw;
+}
+
+.labelInputs input,
+.labelInputs textarea,
+.labelInputs select {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  margin-top: 6px;
+  resize: none;
+}
+
+.labelInputs input::placeholder,
+.labelInputs textarea::placeholder {
+  font-size: 1.35vw;
+}
+
+.labelInputs small {
+  color: #fff;
+  background-color: grey;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+  font-size: 18px;
+  text-align: center;
+}
+
+.labelInputs small i {
+  position: absolute;
+  right: 20%;
+  top: 20%;
+  font-size: 16px;
+  color: #0000ff;
+  cursor: pointer;
+}
+
+#form-submit {
+  display: inline-block;
+  background: #9b59b6;
+  padding: 14px 0;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 8px;
+  width: 100%;
+  outline: none;
+  border: none;
+  transition: opacity 0.5s ease-in-out;
+  font-size: 1.4vw;
+}
+
+#form-submit:hover,
+#form-submit:focus {
+  opacity: 0.9;
+}
+
+.status {
+  background-color: green;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  margin-top: 10px;
+  padding: 10px 10px;
+  position: relative;
+  visibility: hidden;
+}
+
+.status i {
+  position: absolute;
+  right: 1%;
+  top: 2%;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/*
+  Extra large devices (large laptops and desktops, 1200px and up) */
+@media all and (max-width: 1200px) {
+  .search_container input[type="search"] {
+    padding: 7px;
+    width: 70%;
+    margin-left: 20px;
+  }
+
+  .search_container button {
+    padding: 7px;
+  }
+
+  .top_menu_container ul li {
+    display: inline;
+    padding: 0px 7px;
+  }
+
+  .top_menu_container ul li a {
+    font-size: 1rem;
+  }
+
+  .navigation_menu a {
+    padding-left: 30px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media all and (max-width: 992px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top_menu_container ul li a {
+    font-size: 0.99rem;
+  }
+
+  .header img {
+    margin-bottom: 20px;
+  }
+
+  .search_container {
+    margin-top: 35px;
+  }
+
+  .search_container button {
+    padding: 4px;
+  }
+
+  .search_container input[type="search"] {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .top_menu_container ul li {
+    display: block;
+    margin: 40px;
+  }
+
+  .btn_container {
+    display: inline-block;
+    margin: 0px auto;
+  }
+
+  .cta_1 button,
+  .cta_2 button {
+    padding: 15px 15px;
+    border-radius: 50px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    flex-direction: row;
+    margin: 10px auto;
+    border: none;
+    text-align: center;
+  }
+
+  .buttons button#next {
+    top: 91%;
+    padding: 11px;
+  }
+
+  .buttons button#prev {
+    top: 91%;
+    padding: 11px;
+  }
+
+  .dropdown {
+    padding-left: 0;
+  }
+
+  .navigation_menu a:not(:first-child),
+  .dropdown .dropbtn {
+    display: none;
+  }
+
+  .navigation_menu a.icon {
+    float: left;
+    display: block;
+  }
+
+  .navigation_menu.responsive {
+    position: relative;
+  }
+  .navigation_menu.responsive .icon {
+    position: absolute;
+    right: 93.55%;
+    top: 0%;
+    display: block;
+  }
+  .navigation_menu.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+  .navigation_menu.responsive .dropdown {
+    float: none;
+  }
+  .navigation_menu.responsive .dropdown-content {
+    position: relative;
+  }
+  .navigation_menu.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+
+  .we-are-different {
+    width: 100%;
+    padding: 0 3%;
+  }
+
+  .we-are-different #about-fiu {
+    right: 55%;
+  }
+
+  .serinli-Accommodation p,
+  .zetilik-Accommodation p,
+  .Çatalköy-Accommodation p,
+  .Liman-Accommodation p,
+  .girls-Accommodation p {
+    font-size: 1.3rem;
+  }
+
+  .serinli-Accommodation p:first-child,
+  .zetilik-Accommodation p:first-child,
+  .Çatalköy-Accommodation p:first-child,
+  .Liman-Accommodation p:first-child,
+  .girls-Accommodation p:first-child {
+    font-size: 1.8rem;
+  }
+
+  .copy-rights p {
+    font-size: 16px;
+  }
+}
+
+/* start of medium tablet styles */
+@media all and (max-width: 770px) {
+  .search_container {
+    margin-top: 35px;
+  }
+
+  .search_container button {
+    padding: 4px;
+  }
+
+  .search_container input[type="search"] {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .top_menu_container ul li {
+    display: block;
+    margin: 45px;
+  }
+
+  .top_menu_container ul li a {
+    font-size: 17px;
+  }
+
+  .top_menu_container ul li:nth-child(4) {
+    display: block;
+  }
+
+  .btn_container {
+    margin: 0px auto;
+    display: inline-block;
+  }
+
+  .cta_1 button,
+  .cta_2 button {
+    padding: 13px 13px;
+    border-radius: 50px;
+  }
+  .cta_3 {
+    display: none;
+  }
+
+  .navigation_menu a:not(:first-child),
+  .dropdown .dropbtn {
+    display: none;
+  }
+
+  .navigation_menu a.icon {
+    float: left;
+    display: block;
+  }
+
+  .navigation_menu.responsive {
+    position: relative;
+  }
+  .navigation_menu.responsive .icon {
+    position: absolute;
+    right: 93.55%;
+    top: 0%;
+    display: block;
+  }
+  .navigation_menu.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+  .navigation_menu.responsive .dropdown {
+    float: none;
+  }
+  .navigation_menu.responsive .dropdown-content {
+    position: relative;
+  }
+  .navigation_menu.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+
+  .buttons button#next {
+    top: 95%;
+    padding: 9px;
+  }
+
+  .buttons button#prev {
+    top: 95%;
+    padding: 9px;
+  }
+
+  .registeration-btns {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .registeration-btns a button {
+    margin-top: 15px;
+  }
+
+  .we-are-different p {
+    font-size: 1rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    flex-direction: row;
+    margin: 10px auto;
+    border: none;
+    text-align: center;
+  }
+
+  .payment p,
+  .payment a {
+    text-align: center;
+  }
+
+  .serinli-Accommodation p,
+  .zetilik-Accommodation p,
+  .Çatalköy-Accommodation p,
+  .Liman-Accommodation p,
+  .girls-Accommodation p {
+    font-size: 1rem;
+  }
+
+  .serinli-Accommodation p:first-child,
+  .zetilik-Accommodation p:first-child,
+  .Çatalköy-Accommodation p:first-child,
+  .Liman-Accommodation p:first-child,
+  .girls-Accommodation p:first-child {
+    font-size: 1.6rem;
+  }
+
+  /*.social_media_container .button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }*/
+}
+
+/* start of phone styles */
+@media all and (max-width: 480px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .search_container button {
+    padding: 4px;
+  }
+
+  .search_container input[type="search"] {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .top_menu_container ul li {
+    display: block;
+    margin: 40px;
+  }
+
+  .top_menu_container ul li:nth-child(4) {
+    display: block;
+  }
+
+  .btn_container {
+    margin: 0px auto;
+    display: inline-block;
+  }
+
+  .cta_1 button,
+  .cta_2 button {
+    font-size: 23px;
+    padding: 8px 8px;
+    border-radius: 50px;
+  }
+  .cta_3 {
+    display: none;
+  }
+
+  .buttons button#next {
+    top: 65%;
+  }
+
+  .buttons button#prev {
+    top: 65%;
+  }
+
+  .navigation_menu a:not(:first-child),
+  .dropdown .dropbtn {
+    display: none;
+  }
+
+  .navigation_menu a.icon {
+    float: left;
+    display: block;
+  }
+
+  .navigation_menu.responsive {
+    position: relative;
+  }
+  .navigation_menu.responsive .icon {
+    position: absolute;
+    right: 93.55%;
+    top: 0%;
+    display: block;
+  }
+  .navigation_menu.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+  .navigation_menu.responsive .dropdown {
+    float: none;
+  }
+  .navigation_menu.responsive .dropdown-content {
+    position: relative;
+  }
+  .navigation_menu.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+
+  .live-in-cyprus {
+    text-align: center;
+  }
+
+  .live-in-cyprus p {
+    font-size: 1rem;
+  }
+
+  .live-in-cyprus ul li {
+    font-size: 0.8rem;
+  }
+
+  .we-are-different {
+    text-align: center;
+  }
+
+  .we-are-different p {
+    font-size: 0.8rem;
+  }
+
+  .we-are-different #about-fiu {
+    display: none;
+  }
+
+  .serinli-Accommodation p,
+  .zetilik-Accommodation p,
+  .Çatalköy-Accommodation p,
+  .Liman-Accommodation p,
+  .girls-Accommodation p {
+    font-size: 0.8rem;
+  }
+
+  .serinli-Accommodation p:first-child,
+  .zetilik-Accommodation p:first-child,
+  .Çatalköy-Accommodation p:first-child,
+  .Liman-Accommodation p:first-child,
+  .girls-Accommodation p:first-child {
+    font-size: 1.4rem;
+  }
+}

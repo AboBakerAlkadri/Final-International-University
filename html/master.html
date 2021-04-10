@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> التسجيل للماجستير - جامعة فاينال الدولية</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="/icon/final-international-icon.png" sizes="152x152">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+</head>
+<body>
+    <div class="form-container">
+        <form id="register-form">
+            <h1>التسجيل الإلكتروني للماحستير</h1>
+            <div class="labelInputs">
+                <label>الأسم الكامل كما في جواز السفر( باللغة الانجليزية )*</label>
+                <input type="text" placeholder="الأسم الكامل كما في جواز السفر( باللغة الانجليزية)" name="الاسم الكامل" id="name">
+                <small>الحقل خاطئ</small>
+            </div>
+            <div class="labelInputs">
+                <label>E-mail (تاكد من وضع ايميلك الصحيح)*:</label>
+                <input type="email" placeholder="E-mail. ( تاكد من وضع ايميلك الصحيح )" name="الايميل الإلكتروني" id="email">
+                <small>الحقل خاطئ</small>
+            </div>
+            <div class="labelInputs">
+                <label>رقم الجوال مع مفتاح البلد الكامل ( يفضل ان يحتوي على واتس اب )*:</label>
+                <input type="tel" placeholder="رقم الجوال مع مفتاح البلد الكامل ( يفضل ان يحتوي على واتس اب )" name="رقم الهاتف" id="phone">
+                <small>الحقل خاطئ</small>
+            </div>
+            <div class="labelInputs">
+                <label>تاريخ الميلاد*:</label>
+                <input type="date" value="2021-02-22" name="تاريخ الميلاد" id="birthday">
+                <small>الحقل خاطئ</small>
+            </div>
+            <div class="labelInputs">
+                <label>الشهادة الجامعية*:</label>
+                <input type="file" name="الشهادة الجامعية">
+            </div>
+            <div class="labelInputs">
+                <label>كشف درجات الشهادة&nbsp; الجامعية&nbsp;*:</label>
+                <input type="file" name="كشف درجات الجامعة">
+            </div>
+            <div class="labelInputs">
+                <label>جواز السفر (1)*</label>
+                <input type="file"  name="1جواز السفر">
+            </div>
+            <div class="labelInputs">
+                <label>جواز السفر*</label>
+                <input type="file"  name="جواز السفر">
+            </div>
+            <div class="labelInputs">
+                <label>مرفق إضافي (إذا وجد )</label>
+                <input type="file" name="مرفق إضافي">
+            </div>
+            <div class="labelInputs">
+                <label>التخصص المرغوب ( ماجستير باللغة الإنجليزية )</label>
+                <select name="تخصصات الماجستير">
+                    <option value="ماجستير إدارة الاعمال" selected>ماجستير إدارة الاعمال</option>
+                    <option value="ماجستير السياحة وإدارة الضبافة">
+                        ماجستير السياحة وإدارة الضبافة</option>
+                    <option value="اللغة الانجليزية والتعليم">
+                        اللغة الانجليزية والتعليم
+                    </option>
+                    <option value="إدارة التعليم والإشراف">
+                        إدارة التعليم والإشراف
+                    </option>
+                    <option value="التوجيه والإرشاد النفسي">
+                        التوجيه والإلكترونيات النفسي
+                    </option>
+                    <option value="علم النفس السريري">
+                        علم النفس السريري
+                    </option>
+                </select>
+            </div>
+            <div class="labelInputs">
+                <label>عرف عن نفسك أو أضف ملاحظة إذا وجد</label>
+                <textarea name="تعليق" placeholder="عرف عن نفسك أو أضف ملاحظة إذا وجد."></textarea>
+            </div>
+            <input type="submit" value="ارسل" name="submit-btn" id="form-submit">
+        </form>
+    </div>
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>
